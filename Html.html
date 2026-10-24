@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hasini-portfolio</title>
+<link rel="icon" type="image/png href="H.png">
+<meta name="description" content="Portfolio of Danta Hasini, a Computer Science student at Andhra University College of Engineering passionate about AI, machine learning, data science and full-stack development.">
+<meta property="og:title" content="Danta Hasini · AI/ML &amp; Software Developer">
+<meta property="og:description" content="Building intelligent solutions for real-world problems.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#070b17">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070b17;--bg2:#0c1226;--card:rgba(255,255,255,.04);--line:rgba(255,255,255,.09);--tx:#e8ecf8;--mu:#9aa5c4;--ac:#7c8cff;--ac2:#a78bfa;--cy:#5eead4;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+body::after{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(60rem 40rem at 85% -10%,rgba(124,140,255,.18),transparent 60%),radial-gradient(45rem 30rem at -10% 40%,rgba(167,139,250,.10),transparent 60%)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+.eyebrow{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.78rem;letter-spacing:.14em;color:var(--cy);text-transform:uppercase}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.15;margin:.5rem 0 1rem;letter-spacing:-.02em}
+p.lead{color:var(--mu);max-width:640px}
+:focus-visible{outline:2px solid var(--cy);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;color:#000;padding:8px 12px;border-radius:8px;z-index:100}.skip:focus{left:8px}
+/* nav */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(7,11,23,.72);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700}
+.mono{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;font-weight:800;font-size:.9rem;background:linear-gradient(135deg,var(--ac),var(--ac2));color:#0a0e1f}
+.links{display:flex;gap:4px}
+.links a{padding:8px 12px;border-radius:8px;color:var(--mu);font-size:.92rem;font-weight:500;transition:.2s}
+.links a:hover{color:var(--tx);background:var(--card)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:12px;font-weight:600;font-size:.95rem;border:1px solid var(--line);transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer;font-family:inherit;color:var(--tx);background:var(--card)}
+.btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.08)}
+.btn.pri{background:linear-gradient(135deg,var(--ac),var(--ac2));color:#0a0e1f;border:0;box-shadow:0 8px 30px -8px rgba(124,140,255,.6)}
+.btn.pri:hover{background:linear-gradient(135deg,#8d9bff,#b69cff)}
+.btn.sm{padding:9px 14px;font-size:.85rem;border-radius:10px}
+#menu{display:none;background:none;border:1px solid var(--line);color:var(--tx);border-radius:10px;padding:8px;cursor:pointer}
+/* hero */
+.hero{padding:72px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
+.hero .eyebrow,.hero .name{text-align:center}
+.name{font-size:clamp(1.7rem,4vw,2.6rem);font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin:20px 0 22px;background:linear-gradient(110deg,var(--cy),var(--ac) 45%,var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 22px rgba(124,140,255,.35))}
+h1{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.08;letter-spacing:-.03em;margin:0 0 20px;font-weight:800}
+h1 span{background:linear-gradient(120deg,var(--ac),var(--ac2) 55%,var(--cy));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mu);font-size:1.08rem;max-width:560px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 22px}
+.soc{display:flex;gap:10px}
+.soc a{width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--line);border-radius:12px;background:var(--card);transition:.2s}
+.soc a:hover{border-color:var(--ac);transform:translateY(-2px)}
+.term{border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));box-shadow:0 30px 80px -30px rgba(124,140,255,.4);overflow:hidden;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.84rem}
+.term .bar{display:flex;gap:7px;padding:12px 14px;border-bottom:1px solid var(--line);align-items:center}
+.term .bar i{width:10px;height:10px;border-radius:50%;background:#3a4363}
+.term .bar b{margin-left:auto;color:var(--mu);font-weight:400;font-size:.75rem}
+.term pre{margin:0;padding:18px;overflow-x:auto;line-height:1.8;color:#c9d2ee}
+.k{color:#c4a8ff}.s{color:var(--cy)}.c{color:#6b7699}.f{color:#8fa0ff}
+.caret{display:inline-block;width:8px;height:15px;background:var(--cy);vertical-align:-2px;animation:bl 1.1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+/* about */
+.grid2{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;margin-top:28px}
+.about p{color:var(--mu);margin:0 0 16px}
+.pts{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:12px}
+.pts li{display:flex;gap:12px;align-items:flex-start;color:var(--tx)}
+.pts svg{flex:none;color:var(--cy);margin-top:3px}
+.panel{border:1px solid var(--line);background:var(--card);border-radius:18px;padding:24px;backdrop-filter:blur(8px)}
+.panel h3{margin:0 0 14px;font-size:1rem}
+.stat{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line);color:var(--mu);font-size:.93rem;gap:16px}
+.stat:last-child{border:0}.stat b{color:var(--tx);text-align:right}
+/* skills */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:32px}
+.cat{border:1px solid var(--line);background:var(--card);border-radius:18px;padding:22px;transition:.25s}
+.cat:hover{border-color:rgba(124,140,255,.5);transform:translateY(-4px)}
+.cat .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(124,140,255,.14);color:var(--ac);margin-bottom:14px}
+.cat h3{margin:0 0 12px;font-size:1.02rem}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-size:.78rem;padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:#c3cbe6;background:rgba(255,255,255,.03);font-family:"JetBrains Mono",ui-monospace,monospace}
+/* projects */
+.pgrid{display:flex;flex-direction:column;gap:16px;margin-top:28px}
+.pgrid .proj{flex-direction:row}
+.pgrid .art{flex:0 0 210px;height:auto;min-height:130px;border-bottom:0;border-right:1px solid var(--line)}
+.pgrid .art svg{position:absolute;inset:0}
+.proj{border:1px solid var(--line);border-radius:20px;background:var(--bg2);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,border-color .3s,box-shadow .3s}
+.proj:hover{transform:translateY(-6px);border-color:rgba(124,140,255,.5);box-shadow:0 24px 60px -28px rgba(124,140,255,.5)}
+.art{height:160px;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.art svg{width:100%;height:100%;display:block}
+.pb{padding:16px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.cat-l{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.72rem;letter-spacing:.08em;color:var(--cy);text-transform:uppercase}
+.pb h3{margin:0;font-size:1.15rem}
+.pb p{margin:0;color:var(--mu);font-size:.88rem;line-height:1.55}
+.pb .acts{margin-top:auto;padding-top:8px;display:flex;gap:10px;flex-wrap:wrap}
+/* timeline */
+.tl{margin-top:32px;border-left:1px solid var(--line);padding-left:28px;display:grid;gap:24px}
+.ti{position:relative}
+.ti::before{content:"";position:absolute;left:-34px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--ac);box-shadow:0 0 0 5px rgba(124,140,255,.18)}
+.ti h3{margin:0;font-size:1.05rem}.ti span{color:var(--mu);font-size:.9rem}
+.ach{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:20px}
+.ach .panel{padding:18px;display:flex;gap:12px;align-items:flex-start}
+.ach svg{color:var(--ac2);flex:none;margin-top:2px}
+.ach b{display:block;font-size:.95rem}.ach small{color:var(--mu)}
+/* contact */
+.contact{text-align:center}
+.contact .panel{padding:56px 28px;background:linear-gradient(160deg,rgba(124,140,255,.12),rgba(167,139,250,.05));border-color:rgba(124,140,255,.3)}
+.contact p.lead{margin:0 auto 28px}
+.contact .cta{justify-content:center;margin:0 0 6px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mu);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+footer .soc a{width:36px;height:36px}
+/* modal */
+dialog{border:1px solid var(--line);border-radius:20px;background:var(--bg2);color:var(--tx);max-width:600px;width:calc(100% - 32px);padding:28px}
+dialog::backdrop{background:rgba(3,5,12,.7);backdrop-filter:blur(4px)}
+dialog h3{margin:4px 0 10px;font-size:1.5rem}dialog p,dialog li{color:var(--mu);font-size:.95rem}
+dialog ul{padding-left:20px}
+.note{border:1px solid rgba(251,191,36,.35);background:rgba(251,191,36,.07);color:#f6d98a;border-radius:12px;padding:12px 14px;font-size:.85rem;margin:14px 0}
+.x{float:right;background:none;border:1px solid var(--line);color:var(--tx);border-radius:10px;padding:6px;cursor:pointer}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.rv.in{opacity:1;transform:none}
+@media(max-width:860px){.hero .wrap,.grid2,.pgrid{grid-template-columns:1fr}.pgrid .proj{flex-direction:column}.pgrid .art{flex:none;height:160px;min-height:0;border-right:0;border-bottom:1px solid var(--line)}.links{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:var(--bg2);padding:12px 24px;border-bottom:1px solid var(--line)}.links.open{display:flex}#menu{display:block}.hide-m{display:none}section{padding:72px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav aria-label="Primary"><div class="wrap">
+  <a class="logo" href="#home" aria-label="Danta Hasini, home"><span class="mono">DH</span><span class="hide-m">Danta Hasini</span></a>
+  <div class="links" id="links">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a>
+  </div>
+  <div style="display:flex;gap:10px;align-items:center">
+    <a class="btn pri sm" href="#contact">Let’s Connect</a>
+    <button id="menu" aria-label="Toggle menu" aria-expanded="false" aria-controls="links"><i data-i="menu"></i></button>
+  </div>
+</div></nav>
+
+<main id="main">
+<section class="hero" id="home"><div class="wrap">
+  <div>
+    <div class="eyebrow">Computer Science Student · AI/ML Enthusiast</div>
+    <div class="name">Danta Hasini</div>
+    <h1>Building <span>Intelligent Solutions</span> for Real-World Problems.</h1>
+    <p>I’m a Computer Science student passionate about AI, machine learning, data science, and building practical applications that turn ideas into useful solutions.</p>
+    <div class="cta">
+      <a class="btn pri" href="#projects">Explore My Projects <i data-i="arrow-right"></i></a>
+      <a class="btn" href="https://github.com/hasinii1" target="_blank" rel="noopener"><i data-i="github"></i> View GitHub</a>
+    </div>
+    <div class="soc">
+      <a href="https://github.com/hasinii1" target="_blank" rel="noopener" aria-label="GitHub"><i data-i="github"></i></a>
+      <a href="https://www.linkedin.com/in/hasini1/" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-i="linkedin"></i></a>
+    </div>
+  </div>
+</div></section>
+
+<section id="about"><div class="wrap rv">
+  <div class="eyebrow">About</div>
+  <h2>A Little About Me</h2>
+  <div class="grid2">
+    <div class="about">
+      <p>I’m a Computer Science student who enjoys exploring AI and machine learning, analyzing data, and developing applications. I like understanding how things work by building them, and I’m looking to grow through internships and collaborative projects.</p>
+      <ul class="pts">
+        <li><i data-i="hammer"></i>Learning by building practical projects.</li>
+        <li><i data-i="brain"></i>Exploring AI and machine learning applications.</li>
+        <li><i data-i="bar-chart-3"></i>Turning data into meaningful insights.</li>
+        <li><i data-i="trending-up"></i>Continuously improving my technical and development skills.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>Academic Snapshot</h3>
+      <div class="stat"><span>University</span><b>Andhra University College of Engineering</b></div>
+      <div class="stat"><span>Degree</span><b>Bachelor’s in Computer Science</b></div>
+      <div class="stat"><span>Years</span><b>2024–2028</b></div>
+      <div class="stat"><span>Current CGPA</span><b>9.04</b></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap rv">
+  <div class="eyebrow">Skills</div>
+  <h2>Technical Skills</h2>
+  <p class="lead">The languages, libraries and tools I use to build and analyze.</p>
+  <div class="cards" id="skillCards"></div>
+</div></section>
+
+<section id="projects"><div class="wrap rv">
+  <div class="eyebrow">Projects</div>
+  <h2>Projects That Bring Ideas to Life</h2>
+  <p class="lead">Projects spanning AI, machine learning, computer vision and analytics. Open a card for more details.</p>
+  <div class="pgrid" id="pgrid"></div>
+</div></section>
+
+<section id="experience"><div class="wrap rv">
+  <div class="eyebrow">Experience</div>
+  <h2>Experience</h2>
+  <div class="tl"><div class="ti"><h3>Data Analytics with Python Intern</h3><span>Andhra Pradesh State Skill Development Corporation (APSSDC) · Internship</span>
+    <p style="color:var(--mu);margin:10px 0 14px;max-width:640px">During this internship I built RetailIQ, a customer shopping behavior analysis project that combines data analysis, database querying, and interactive visualizations.</p>
+    <a class="btn sm" href="https://github.com/hasinii1/retailiq-customer-analysis" target="_blank" rel="noopener"><i data-i="github"></i> View RetailIQ</a>
+  </div></div>
+</div></section>
+
+<section id="certifications"><div class="wrap rv">
+  <div class="eyebrow">Certifications</div>
+  <h2>Certifications</h2>
+  <div class="ach" id="ach"></div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap rv">
+  <div class="panel">
+    <div class="eyebrow">Contact</div>
+    <h2>Let’s Build Something Meaningful</h2>
+    <p class="lead">I’m open to internship opportunities, collaborative projects, and conversations about AI, machine learning, data science, and software development.</p>
+    <div class="cta">
+      <a class="btn pri" href="mailto:hasinidanta17@gmail.com?subject=Hello%20Hasini" target="_blank" rel="noopener"><i data-i="mail"></i> hasinidanta17@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/hasini1/" target="_blank" rel="noopener"><i data-i="linkedin"></i> LinkedIn</a>
+      <a class="btn" href="https://github.com/hasinii1" target="_blank" rel="noopener"><i data-i="github"></i> GitHub</a>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>© <span id="yr">2026</span> Danta Hasini</span>
+  <div class="soc">
+    <a href="https://github.com/hasinii1" target="_blank" rel="noopener" aria-label="GitHub"><i data-i="github"></i></a>
+    <a href="https://www.linkedin.com/in/hasini1/" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-i="linkedin"></i></a>
+  </div>
+</div></footer>
+
+<dialog id="dlg" aria-labelledby="dt"><button class="x" id="dx" aria-label="Close"><i data-i="x"></i></button><div id="db"></div></dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.383.0/dist/umd/lucide.min.js"></script>
+<script>
+/* ============ EDIT ME ============
+   Repo and demo links are left empty because I could not verify them.
+   Paste the real URL and set verified:true to show a button. */
+const PROJECTS=[
+ {id:"documind",title:"DocuMind",cat:"AI-Powered Document Intelligence",
+  desc:"An intelligent document processing application designed to help users analyze documents, retrieve relevant information, generate contextual answers, and compare document revisions.",
+  tags:["Next.js","Python","PostgreSQL","Docker","Hybrid Retrieval","Page-level Citations","Version Comparison"],
+  repo:"https://github.com/hasinii1/DocuMind",demo:"",verified:true,c:["#7c8cff","#a78bfa"],art:"doc"},
+ {id:"pathfinder",title:"Pathfinder AI",cat:"AI-Powered Student Career Guidance",
+  desc:"An AI-assisted student development platform that analyzes student profiles, identifies skill gaps, matches relevant opportunities, and helps students create personalized learning and career roadmaps.",
+  tags:["Streamlit","Machine Learning","Resume Processing","Skill-gap Analysis","Career Roadmaps"],
+  repo:"https://github.com/hasinii1/PathFinder-AI",demo:"",verified:true,c:["#5eead4","#7c8cff"],art:"path"},
+ {id:"cardio",title:"CardioPredict",cat:"Machine Learning · Healthcare Prediction",
+  desc:"A machine learning application that uses patient health indicators to estimate heart disease risk and present prediction results through an interactive interface.",
+  tags:["Python","Pandas","NumPy","Scikit-learn","Random Forest","Logistic Regression","Streamlit"],
+  repo:"https://github.com/hasinii1/cardiopredict-heart-disease-prediction",demo:"",verified:true,c:["#f472b6","#a78bfa"],art:"heart",
+  note:"Predictions are experimental and are not a substitute for professional medical diagnosis."},
+ {id:"retail",title:"RetailIQ",cat:"Customer Analytics · Business Intelligence",
+  desc:"A customer shopping behavior analysis project that combines data analysis, database querying, and interactive visualizations to uncover useful retail insights.",
+  tags:["Python","MySQL","Pandas","NumPy","Power BI","Streamlit","Plotly","Matplotlib"],
+  repo:"https://github.com/hasinii1/retailiq-customer-analysis",demo:"",verified:true,c:["#fbbf24","#7c8cff"],art:"bars"},
+ {id:"roadintel",title:"RoadIntel",cat:"Computer Vision · Road Condition Intelligence",
+  desc:"An AI-powered computer vision platform for detecting, tracking, analyzing, and assessing potholes from road images and videos, turning visible road damage into structured road condition insights.",
+  tags:["Computer Vision","Pothole Detection","Python","Streamlit"],
+  repo:"https://github.com/hasinii1/RoadIntel",demo:"",verified:true,c:["#34d399","#7c8cff"],art:"road"}
+];
+const ORDER=["documind","pathfinder","roadintel","retail","cardio"];
+PROJECTS.sort((a,b)=>ORDER.indexOf(a.id)-ORDER.indexOf(b.id));
+const SKILLS=[
+ ["code-2","Programming Languages",["Python","SQL","JavaScript","HTML","CSS"]],
+ ["brain-circuit","AI, ML & Data Science",["Machine Learning","Scikit-learn","Pandas","NumPy","Data Analysis","Data Visualization"]],
+ ["database","Databases & Development",["MySQL","Streamlit","REST APIs","Git","GitHub"]],
+ ["bar-chart-3","Analytics & Tools",["Power BI","Microsoft Excel","Jupyter Notebook","Google Colab","VS Code"]]
+];
+const ACH=[
+ ["IBM","Artificial Intelligence Fundamentals"],
+ ["Forage (Tata)","GenAI-Powered Data Analytics Job Simulation"],
+ ["Smart India Hackathon 2025","Top-20 group achievement"],
+ ["Infosys Springboard","Python Fundamentals"],
+ ["Infosys Springboard","Python for Data Science"],
+];
+const GH="https://github.com/hasinii1";
+/* ================================= */
+const $=s=>document.querySelector(s);
+const esc=t=>String(t).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+function art(p){const[a,b]=p.c,g=`<defs><linearGradient id="g${p.id}" x1="0" y1="0" x2="1" y2="1"><stop stop-color="${a}" stop-opacity=".35"/><stop offset="1" stop-color="${b}" stop-opacity=".08"/></linearGradient></defs><rect width="400" height="160" fill="url(#g${p.id})"/>`;let s="";
+ if(p.art=="doc")s=`<rect x="110" y="26" width="110" height="112" rx="10" fill="none" stroke="${a}" stroke-width="2"/><path d="M128 56h74M128 74h74M128 92h48" stroke="${b}" stroke-width="4" stroke-linecap="round"/><circle cx="268" cy="80" r="26" fill="none" stroke="${a}" stroke-width="2"/><path d="m287 99 22 22" stroke="${a}" stroke-width="4" stroke-linecap="round"/>`;
+ if(p.art=="path")s=`<path d="M50 130C110 130 110 60 170 60s60 70 120 40 60-60 80-60" fill="none" stroke="${a}" stroke-width="3" stroke-dasharray="6 7"/><g fill="${b}"><circle cx="50" cy="130" r="8"/><circle cx="170" cy="60" r="8"/><circle cx="290" cy="100" r="8"/><circle cx="370" cy="40" r="10"/></g>`;
+ if(p.art=="heart")s=`<path d="M40 86h80l16-34 28 70 22-52 14 16h160" fill="none" stroke="${a}" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M200 128c-30-22-44-36-44-50 0-12 9-20 20-20 10 0 19 6 24 14 5-8 14-14 24-14 11 0 20 8 20 20 0 14-14 28-44 50z" fill="${b}" opacity=".18"/>`;
+ if(p.art=="bars")s=[40,70,52,96,78,118].map((h,i)=>`<rect x="${70+i*44}" y="${138-h}" width="26" height="${h}" rx="6" fill="${i%2?b:a}" opacity=".75"/>`).join("")+`<path d="M70 96l44-24 44 12 44-38 44 18 44-30" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="2"/>`;
+ if(p.art=="road")s=`<path d="M140 160L185 20h30l45 140z" fill="${b}" opacity=".18"/><path d="M200 24v132" stroke="${a}" stroke-width="3" stroke-dasharray="10 10" opacity=".8"/><ellipse cx="228" cy="110" rx="22" ry="9" fill="${a}" opacity=".35"/><rect x="198" y="88" width="62" height="42" rx="6" fill="none" stroke="${a}" stroke-width="2.5" stroke-dasharray="5 4"/>`;
+ return `<svg viewBox="0 0 400 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${g}${s}</svg>`}
+function links(p,sm){const repo=p.repo&&p.verified?p.repo:null,demo=p.demo&&p.verified?p.demo:null;
+ return `<button class="btn sm" data-d="${p.id}"><i data-i="info"></i> Details</button>`+
+ (repo?`<a class="btn pri sm" href="${esc(repo)}" target="_blank" rel="noopener"><i data-i="github"></i> View Project</a>`:`<a class="btn sm" href="${GH}?tab=repositories" target="_blank" rel="noopener"><i data-i="github"></i> Find on GitHub</a>`)+
+ (demo?`<a class="btn sm" href="${esc(demo)}" target="_blank" rel="noopener"><i data-i="external-link"></i> Live Demo</a>`:"")}
+$("#pgrid").innerHTML=PROJECTS.map(p=>`<article class="proj" ${p.repo&&p.verified?`data-repo="${esc(p.repo)}" style="cursor:pointer"`:""}><div class="art">${art(p)}</div><div class="pb"><div class="cat-l">${esc(p.cat)}</div><h3>${esc(p.title)}</h3><p>${esc(p.desc)}</p><div class="tags">${p.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div><div class="acts">${links(p)}</div></div></article>`).join("");
+$("#skillCards").innerHTML=SKILLS.map(([i,t,l])=>`<div class="cat"><div class="ic"><i data-i="${i}"></i></div><h3>${t}</h3><div class="tags">${l.map(x=>`<span class="tag">${x}</span>`).join("")}</div></div>`).join("");
+$("#ach").innerHTML=ACH.map(([a,b])=>`<div class="panel"><i data-i="award"></i><div><b>${a}</b><small>${b}</small></div></div>`).join("");
+$("#yr").textContent=new Date().getFullYear();
+const dlg=$("#dlg");
+document.addEventListener("click",e=>{const b=e.target.closest("[data-d]");if(!b)return;const p=PROJECTS.find(x=>x.id==b.dataset.d);
+ $("#db").innerHTML=`<div class="cat-l">${esc(p.cat)}</div><h3 id="dt">${esc(p.title)}</h3><p>${esc(p.desc)}</p><div class="tags" style="margin:14px 0">${p.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>${p.note?`<div class="note">${esc(p.note)}</div>`:""}<div class="acts" style="display:flex;gap:10px;flex-wrap:wrap">${links(p).replace(/<button.*?<\/button>/,"")}</div>`;
+ dlg.showModal();render()});
+document.addEventListener("click",e=>{if(e.target.closest("a,button"))return;const c=e.target.closest("[data-repo]");if(c)window.open(c.dataset.repo,"_blank","noopener")});
+$("#dx").onclick=()=>dlg.close();dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
+const mb=$("#menu"),lk=$("#links");
+mb.onclick=()=>{const o=lk.classList.toggle("open");mb.setAttribute("aria-expanded",o)};
+lk.addEventListener("click",()=>{lk.classList.remove("open");mb.setAttribute("aria-expanded","false")});
+function render(){try{
+ document.querySelectorAll("i[data-i]").forEach(el=>{const n=el.dataset.i.replace(/(^|-)(\w)/g,(_,a,c)=>c.toUpperCase());
+  const ic=window.lucide&&lucide.icons&&lucide.icons[n];if(!ic)return;
+  const ns="http://www.w3.org/2000/svg",s=document.createElementNS(ns,"svg");
+  [["width",18],["height",18],["viewBox","0 0 24 24"],["fill","none"],["stroke","currentColor"],["stroke-width",2],["stroke-linecap","round"],["stroke-linejoin","round"],["aria-hidden","true"]].forEach(([k,v])=>s.setAttribute(k,v));
+  ic.forEach(([t,a])=>{const c=document.createElementNS(ns,t);for(const k in a)c.setAttribute(k,a[k]);s.appendChild(c)});
+  el.replaceWith(s)})}catch(e){}}
+render();
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
